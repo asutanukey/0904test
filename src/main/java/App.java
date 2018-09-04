@@ -6,16 +6,28 @@ import java.util.Scanner;
 public class App {
 public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
+    String name;
+    String email;
+    String password;
 
+    while (true) {
     
-    System.out.println("이름?");
-    String name = sc.nextLine();
+        System.out.println("이름?");
+        name = sc.nextLine();
+        
+        System.out.println("이메일?");
+        email = sc.nextLine();
+        
+        System.out.println("패스워드?");
+        password = sc.nextLine();
+        
+        System.out.println("계속하실?");
+        if(sc.nextLine().toLowerCase().equals("n")) {
+            break;
+        }
+        
+    }
     
-    System.out.println("이메일?");
-    String email = sc.nextLine();
-    
-    System.out.println("패스워드?");
-    String password = sc.nextLine();
     
     System.out.printf("%s,%s,%s",name,email,password);
     
